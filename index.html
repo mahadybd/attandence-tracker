@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Attandence Tracker</title>
+  </head>
+  <body>
+    <h1>Attandence Tracker</h1>
+    <div class="container">
+      <h2>
+        <span id="current_date"></span>
+        <span id="current_time" class="current_time"></span>
+      </h2>
+      
+      <div class="timer-controller">
+        <span class="time_type">Work</span>
+        <button onclick="workIn()" id="workInBtn" class="btn">IN</button>
+        <button onclick="workOut()" id="workOutBtn" class="btn disabled" >OUT</button>
+      </div>
+      <div class="timer-controller ">
+        <span class="time_type">Break</span>
+        <button onclick="breakIn()" id="breakInBtn" class="btn disabled">IN</button>
+        <button onclick="breakOut()" id="breakOutBtn" class="btn disabled">OUT</button>
+      </div>
+      <small>Today:</small>
+      <div class="inc-exp-container">
+        <div>
+          <h4>Working Time</h4>
+          <p id="working_time" class="money plus"></p>
+          <small>start: <span id="workStart"></span></small>
+          <small>End: <span id="workEnd"></span></small>
+        </div>
+        <div>
+          <h4>Break Time</h4>
+          <p id="breakTotal" class="money minus"></p>
+          <small>start: <span id="breakStart"></span></small>
+          <small>End: <span id="breakEnd"></span></small>
+        </div>
+      </div>
+
+      <div>
+        <h3>April 2021 Working Time</h3>
+        <ul id="list" class="list">
+          <li>Day 1<span>01.04.2021</span><span>7 hr. 30 minute</span></li>
+          <li>Day 2<span>01.04.2021</span><span>7 hr. 30 minute</span></li>
+          <li>Day 3<span>01.04.2021</span><span>7 hr. 30 minute</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>History</h3>
+        <ul class="list">
+          <li><span>February 2021</span>7 hr. 30 minute</li>
+          <li><span>March 2021</span>7 hr. 30 minute</li>       
+          <li><span>April 2021</span>7 hr. 30 minute</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
